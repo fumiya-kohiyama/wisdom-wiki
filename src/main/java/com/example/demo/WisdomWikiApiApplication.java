@@ -10,6 +10,5 @@ public class WisdomWikiApiApplication {
 		SpringApplication.run(WisdomWikiApiApplication.class, args);
 			
 	}
-
 }
 
