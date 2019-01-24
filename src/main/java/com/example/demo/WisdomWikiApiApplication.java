@@ -9,7 +9,6 @@ public class WisdomWikiApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WisdomWikiApiApplication.class, args);
 			
-		
 	}
 
 }
