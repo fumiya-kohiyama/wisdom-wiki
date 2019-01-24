@@ -1,10 +1,12 @@
 package com.example.demo;
 
+import java.util.LinkedList;
+import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WisdomWikiApiApplication {
+public class samplegaaruyo {
 
 	public static List<Integer> getList()
 	{
