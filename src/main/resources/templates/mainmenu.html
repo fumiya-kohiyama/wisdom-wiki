@@ -6,7 +6,10 @@
 </head>
 <body>
 <div th:replace="layout :: header"></div>
- <span th:text="${message}">Hello world</span>
+ <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method=post>
+            <input type="submit" value="ログアウト"/>
+        </form>
  <p>記事検索</p>
  <form action="/" method="POST">
    <input name="name" type="text" /><br/>
