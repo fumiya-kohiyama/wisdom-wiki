@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: base_header('Main',~{::link})">
-  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" th:href="@{/js/app.js}">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
@@ -13,10 +13,14 @@
 
 <form action="#" th:action="@{/test}" th:object="${detailForm}" method="post">
 
+<p>作成者: <textarea rows="2" cols="80" th:field="*{writer}" /></p>
 <p>タイトル: <textarea rows="2" cols="80" th:field="*{tytle}" /></p>
 <p>内容: <textarea rows="10" cols="80" th:field="*{mainMessage}" /></p>
+<p>時間: <textarea rows="2" cols="80" th:field="*{insertTime}" /></p>
 
-<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+<!-- Primary -->
+<p><button type="button" class="btn btn-primary" />input</button>
+<button type="button" class="btn btn-primary" />reset</button></p>
 
 <p th:text="*{errorMessage}" />
 

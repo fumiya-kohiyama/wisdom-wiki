@@ -5,6 +5,8 @@ public class detailForm {
 	private String tytle;
 	private String mainMessage;
 	private String errorMessage;
+	private String writer;
+	private String insertTime;
 	
 	public String getTytle() {
 		return tytle;
@@ -28,5 +30,21 @@ public class detailForm {
 	
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
+	}
+	
+	public String getWriter() {
+		return writer;
+	}
+	
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	
+	public String getInsertTime() {
+		return insertTime;
+	}
+	
+	public void setInsertTime(String insertTime) {
+		this.insertTime = insertTime;
 	}
 }

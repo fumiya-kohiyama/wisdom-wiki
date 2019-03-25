@@ -18,10 +18,11 @@ public class DetailController {
 	public String input(detailForm detail) {
 		String tytle = detail.getTytle();
 		String message = detail.getMainMessage();
+		String writer = detail.getWriter(); 
 		
 		detail.setErrorMessage("");
 		if(tytle == "" || message == "") {
-			detail.setErrorMessage("蠢�鬆磯��逶ｮ縺ｧ縺�");
+			detail.setErrorMessage("入力項目が不正です。");
 		}
 		return "detail";
 	}
