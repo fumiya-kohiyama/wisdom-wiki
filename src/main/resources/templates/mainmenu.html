@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: base_header('Main',~{::link})">
-  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-  <link rel="stylesheet" th:href="@{/js/app.js}">
+  <link rel="stylesheet" media="all" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" media="all" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
 <div th:replace="layout :: header"></div>
  <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form th:action="@{/logout}" method=post>
-            <input type="submit" value="ログアウト"/>
-        </form>
- <p>記事検索</p>
- <form action="/" method="POST">
-   <input name="name" type="text" /><br/>
-   <input type="submit" />
+
+<div class="row header">
+    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+    記事検索
+</div>
+ <form action="/" class="form-group" method="POST">
+   <label class="sr-only" for="text5a">Article Name</label>
+   <input name="name" class="form-control mb-2" type="text" placeholder="Article Name"/><br/>
+   <input type="submit" class="btn btn-primary"/>
+ </form>
+ <form th:action="@{/logout}" method=post　>
+    <input type="submit" value="ログアウト" class="btn btn-primary"/>
  </form>
 <div th:replace="layout :: footer"></div>
+
 </body>
 </html>
